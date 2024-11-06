@@ -520,6 +520,7 @@ impl<'a> From<Filters<'a>> for SubscribeRequest {
                         owner: v.owners.iter().map(ToString::to_string).collect(),
                         // TODO: probably a good thing to look into
                         filters: vec![],
+                        nonempty_txn_signature: None,
                     }))
                 })
                 .collect(),
